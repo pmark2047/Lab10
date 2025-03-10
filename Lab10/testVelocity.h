@@ -455,7 +455,17 @@ private:
     *********************************************/
    void reverse_stationary()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = 0;
+      v.dy = 0;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, 0);
+      assertEquals(v.dy, 0);
    }
 
    /*********************************************
@@ -465,7 +475,17 @@ private:
     *********************************************/
    void reverse_up()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = 0;
+      v.dy = 10;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, 0);
+      assertEquals(v.dy, -10);
    }
 
    /*********************************************
@@ -475,7 +495,17 @@ private:
     *********************************************/
    void reverse_down()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = 0;
+      v.dy = -12.34;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, 0);
+      assertEquals(v.dy, 12.34);
    }
 
    /*********************************************
@@ -485,7 +515,17 @@ private:
     *********************************************/
    void reverse_left()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = -300;
+      v.dy = 0;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, 300);
+      assertEquals(v.dy, 0);
    }
 
    /*********************************************
@@ -495,7 +535,17 @@ private:
     *********************************************/
    void reverse_right()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = 0.0123;
+      v.dy = 0;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, -0.0123);
+      assertEquals(v.dy, 0);
    }
 
    /*********************************************
@@ -505,7 +555,17 @@ private:
     *********************************************/
    void reverse_diagonal()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v;
+      v.dx = 123.456;
+      v.dy = -7.89;
+      
+      // EXERCISE
+      v.reverse();
+      
+      // VERIFY
+      assertEquals(v.dx, -123.456);
+      assertEquals(v.dy, 7.89);
    }
 
    /*****************************************************************
@@ -709,7 +769,21 @@ private:
     *********************************************/
    void addV_stationary()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v1;
+      v1.dx = 0;
+      v1.dy = 0;
+      Velocity v2;
+      v2.dx = 2.3;
+      v2.dy = 4.5;
+      
+      
+      // EXERCISE
+      v1.add(v2);
+      
+      // VERIFY
+      assertEquals(v1.dx, 2.3);
+      assertEquals(v1.dy, 4.5);
    }
 
    /*********************************************
@@ -719,7 +793,21 @@ private:
     *********************************************/
    void addV_nothing()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v1;
+      v1.dx = 2.3;
+      v1.dy = 4.5;
+      Velocity v2;
+      v2.dx = 0;
+      v2.dy = 0;
+      
+      
+      // EXERCISE
+      v1.add(v2);
+      
+      // VERIFY
+      assertEquals(v1.dx, 2.3);
+      assertEquals(v1.dy, 4.5);
    }
 
    /*********************************************
@@ -729,7 +817,21 @@ private:
     *********************************************/
    void addV_moving()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // SETUP
+      Velocity v1;
+      v1.dx = 2.3;
+      v1.dy = 4.5;
+      Velocity v2;
+      v2.dx = 100;
+      v2.dy = 200;
+      
+      
+      // EXERCISE
+      v1.add(v2);
+      
+      // VERIFY
+      assertEquals(v1.dx, 102.3);
+      assertEquals(v1.dy, 204.5);
    }
 
 };
