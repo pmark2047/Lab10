@@ -2,7 +2,7 @@
  * Header File:
  *    PHYSICS
  * Author:
- *    <your name here>
+ *    Peyton Markus, William Barr
  * Summary:
  *    Laws of motion, effects of gravity, wind resistence, etc.
  ************************************************************************/

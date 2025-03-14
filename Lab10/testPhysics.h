@@ -1088,7 +1088,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 0;
+      double gravity = -99.99;
+      
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 0);
+      assertEquals(gravity, 9.807);
    }
 
 
@@ -1099,7 +1108,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 10000;
+      double gravity = -99.99;
+      
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 10000);
+      assertEquals(gravity, 9.776);
    }
 
     /*******************************************************
@@ -1109,7 +1127,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 80000;
+      double gravity = -99.99;
+      
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 80000);
+      assertEquals(gravity, 9.564);
    }
 
     /*******************************************************
@@ -1119,7 +1146,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 5500;
+      double gravity = -99.99;
+   
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 5500);
+      assertEquals(gravity, 9.7895);
    }
 
     /*******************************************************
@@ -1129,7 +1165,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 43333;
+      double gravity = -99.99;
+   
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 43333);
+      assertEquals(gravity, 9.674);
    }
 
     /*******************************************************
@@ -1139,7 +1184,16 @@ private:
      ********************************************************/
    void gravityFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 3666.6;
+      double gravity = -99.99;
+   
+      // exercise
+      gravity = gravityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 3666.6);
+      assertEquals(gravity, 9.795);
    }
 
     /*******************************************************
@@ -1175,7 +1229,16 @@ private:
      ********************************************************/
    void densityFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 0;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 0);
+      assertEquals(density,  1.225);
    }
 
     /*******************************************************
@@ -1185,7 +1248,16 @@ private:
      ********************************************************/
    void densityFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 10000;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 10000);
+      assertEquals(density, 0.4135000);
    }
 
     /*******************************************************
@@ -1195,7 +1267,16 @@ private:
      ********************************************************/
    void densityFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 80000;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 80000);
+      assertEquals(density, 0.0000185);
    }
 
     /*******************************************************
@@ -1205,7 +1286,16 @@ private:
      ********************************************************/
    void densityFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 5500;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 5500);
+      assertEquals(density, 0.69825);
    }
 
     /*******************************************************
@@ -1215,7 +1305,16 @@ private:
      ********************************************************/
    void densityFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 43333;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 43333);
+      assertEquals(density, 0.0030063);
    }
 
     /*******************************************************
@@ -1225,7 +1324,16 @@ private:
      ********************************************************/
    void densityFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 3666.6;
+      double density = -999.999;
+      
+      // exercise
+      density = densityFromAltitude(altitude);
+      
+      // verify
+      assertEquals(altitude, 3666.6);
+      assertEquals(density, 0.849372);
    }
 
     /*******************************************************
