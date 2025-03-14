@@ -15,6 +15,29 @@
  *********************************************************/
 double linearInterpolation(const Mapping mapping[], int numMapping, double domain)
 {
+   if (domain < mapping[0].domain)
+   {
+      return mapping[0].range;
+   }
+   
+   if (domain > mapping[numMapping - 1].domain)
+   {
+      return mapping[numMapping - 1].range;
+   }
+   
+   for (int i = 0; i < numMapping; i++)
+   {
+      if (domain >= mapping[i].domain && domain <= mapping[i + 1].domain)
+      {
+         if (domain == mapping[i].domain)
+         {
+            return mapping[i].range;
+         }
+         
+         return linearInterpolation(mapping[i].domain, mapping[i].range, mapping[i + 1].domain, mapping[i + 1].range, domain);
+         
+      }
+   }
    return -99.9;
 }
 

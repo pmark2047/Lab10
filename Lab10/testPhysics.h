@@ -678,17 +678,18 @@ private:
    void linearInterpolation_coordinatesZero()
    {
       // SETUP
-      double d0 = 0;
-      double r0 = 0;
-      double d1 = 8;
-      double r1 = 8;
-      double d = 0;
+      double d0 = 0.0;
+      double r0 = 0.0;
+      double d1 = 8.0;
+      double r1 = 8.0;
+      double d = 0.0;
+      double r = -99.99;
       
       // EXERCISE
-      double r = linearInterpolation(d0, r0, d1, r1, d);
+      r = linearInterpolation(d0, r0, d1, r1, d);
       
       // VERIFY
-      assertEquals(r, 0);
+      assertEquals(r, 0.0);
    }
 
    /*********************************************************
@@ -705,17 +706,18 @@ private:
    void linearInterpolation_coordinatesOne()
    {
       // SETUP
-      double d0 = 0;
-      double r0 = 0;
-      double d1 = 8;
-      double r1 = 8;
-      double d = 8;
+      double d0 = 0.0;
+      double r0 = 0.0;
+      double d1 = 8.0;
+      double r1 = 8.0;
+      double d = 8.0;
+      double r = -99.99;
       
       // EXERCISE
-      double r = linearInterpolation(d0, r0, d1, r1, d);
+      r = linearInterpolation(d0, r0, d1, r1, d);
       
       // VERIFY
-      assertEquals(r, 8);
+      assertEquals(r, 8.0);
       
    }
 
@@ -733,17 +735,18 @@ private:
    void linearInterpolation_coordinatesMiddle()
    {
       // SETUP
-      double d0 = 0;
-      double r0 = 0;
-      double d1 = 8;
-      double r1 = 8;
-      double d = 4;
+      double d0 = 0.0;
+      double r0 = 0.0;
+      double d1 = 8.0;
+      double r1 = 8.0;
+      double d = 4.0;
+      double r = -99.99;
       
       // EXERCISE
-      double r = linearInterpolation(d0, r0, d1, r1, d);
+      r = linearInterpolation(d0, r0, d1, r1, d);
       
       // VERIFY
-      assertEquals(r, 4);
+      assertEquals(r, 4.0);
    }
 
    /*********************************************************
@@ -760,17 +763,18 @@ private:
    void linearInterpolation_coordinatesTop()
    {
       // SETUP
-      double d0 = 0;
-      double r0 = 0;
-      double d1 = 8;
-      double r1 = 8;
-      double d = 6;
+      double d0 = 0.0;
+      double r0 = 0.0;
+      double d1 = 8.0;
+      double r1 = 8.0;
+      double d = 6.0;
+      double r = -99.99;
       
       // EXERCISE
-      double r = linearInterpolation(d0, r0, d1, r1, d);
+      r = linearInterpolation(d0, r0, d1, r1, d);
       
       // VERIFY
-      assertEquals(r, 6);
+      assertEquals(r, 6.0);
    }
 
    /*********************************************************
@@ -788,17 +792,18 @@ private:
    void linearInterpolation_coordinatesBackwards()
    {
       // SETUP
-      double d0 = 7;
-      double r0 = -3;
-      double d1 = 1;
-      double r1 = 9;
-      double d = 3;
+      double d0 = 7.0;
+      double r0 = -3.0;
+      double d1 = 1.0;
+      double r1 = 9.0;
+      double d = 3.0;
+      double r = -99.99;
       
       // EXERCISE
-      double r = linearInterpolation(d0, r0, d1, r1, d);
+      r = linearInterpolation(d0, r0, d1, r1, d);
       
       // VERIFY
-      assertEquals(r, 5);
+      assertEquals(r, 5.0);
    }
 
 
@@ -865,7 +870,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappingTwo()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 7.0;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 7.0);
+      assertEquals(r, 5.0);
    }
 
 
@@ -885,7 +906,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappingMid01()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 2.0;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 2.0);
+      assertEquals(r, 2.5);
    }
 
 
@@ -905,7 +942,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappingTop01()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 2.8;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 2.8);
+      assertEquals(r, 2.9);
    }
 
 
@@ -925,7 +978,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappinglower23()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 7.33333333;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 7.33333333);
+      assertEquals(r, 5.5);
    }
 
 
@@ -946,7 +1015,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappingSmall()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 0.0;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 0.0);
+      assertEquals(r, 2.0);
    }
 
 
@@ -967,7 +1052,23 @@ private:
     *********************************************************/
    void linearInterpolation_mappingLarge()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+      double d = 50.0;
+      double r = -999.999;  // output
+      
+      // exercise
+      r = linearInterpolation(mapping, 4 /*numMapping*/, d);
+      
+      // verify
+      assertEquals(d, 50.0);
+      assertEquals(r, 6.5);
    }
 
 
