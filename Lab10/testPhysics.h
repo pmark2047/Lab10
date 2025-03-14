@@ -1368,7 +1368,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 0.0;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude, 0.0);
+      assertEquals(speedSound, 340);
    }
 
     /*******************************************************
@@ -1378,7 +1385,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 10000;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude,    10000);
+      assertEquals(speedSound,  299.0);
    }
 
     /*******************************************************
@@ -1388,7 +1402,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 80000;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude,    80000);
+      assertEquals(speedSound,  269.0);
    }
 
     /*******************************************************
@@ -1398,7 +1419,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude =  5500;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude,     5500);
+      assertEquals(speedSound,  318.0);
    }
 
     /*******************************************************
@@ -1408,7 +1436,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 43333;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude,       43333);
+      assertEquals(speedSound,  328.3329);
    }
 
     /*******************************************************
@@ -1418,7 +1453,14 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+      double altitude = 3666;
+      double speedSound = -99.99;
+      // exercise
+      speedSound = speedSoundFromAltitude(altitude);
+      // verify
+      assertEquals(altitude,       3666);
+      assertEquals(speedSound,  325.336);
    }
 
     /*******************************************************
@@ -1452,7 +1494,14 @@ private:
      ********************************************************/
    void dragFromMach_000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+         double speedMach = 0;
+         double drag = -99.99;
+         // exercise
+         drag = dragFromMach(speedMach);
+         // verify
+         assertEquals(speedMach, 0);
+         assertEquals(drag,      0);
    }
 
     /*******************************************************
@@ -1462,7 +1511,14 @@ private:
      ********************************************************/
    void dragFromMach_500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+         double speedMach = 5.00;
+         double drag =    -99.99;
+         // exercise
+         drag = dragFromMach(speedMach);
+         // verify
+         assertEquals(speedMach,   5.00);
+         assertEquals(drag,      0.2656);
    }
 
     /*******************************************************
@@ -1472,7 +1528,14 @@ private:
      ********************************************************/
    void dragFromMach_100()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+         double speedMach = 1.00;
+         double drag =    -99.99;
+         // exercise
+         drag = dragFromMach(speedMach);
+         // verify
+         assertEquals(speedMach,   1.00);
+         assertEquals(drag,      0.4258);
    }
 
     /*******************************************************
@@ -1482,7 +1545,14 @@ private:
      ********************************************************/
    void dragFromMach_060()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+         double speedMach = 0.6;
+         double drag =   -99.99;
+         // exercise
+         drag = dragFromMach(speedMach);
+         // verify
+         assertEquals(speedMach,    0.6);
+         assertEquals(drag,      0.1845);
    }
 
     /*******************************************************
@@ -1492,7 +1562,14 @@ private:
      ********************************************************/
    void dragFromMach_010()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+         double speedMach = 0.1;
+         double drag =   -99.99;
+         // exercise
+         drag = dragFromMach(speedMach);
+         // verify
+         assertEquals(speedMach,    0.1);
+         assertEquals(drag,      0.0543);
    }
 
     /*******************************************************
@@ -1503,12 +1580,12 @@ private:
    void dragFromMach_314()
    {  // setup
       double speedMach = 3.14159;
-      double drag = -99.99;
+      double drag =       -99.99;
       // exercise
       drag = dragFromMach(speedMach);
       // verify
       assertEquals(speedMach, 3.14159);
-      assertEquals(drag,      0.2347);
+      assertEquals(drag,       0.2347);
    }  // teardown
 
 };

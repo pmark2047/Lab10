@@ -36,7 +36,7 @@ inline double areaFromRadius(double radius)
 inline double forceFromDrag(double density, double drag, 
                             double radius, double velocity)
 {
-   return 0.5 * density * drag * areaFromRadius(radius) * velocity;
+   return 0.5 * density * drag * areaFromRadius(radius) * (velocity * velocity);
 }
 
 /**********************************************************
